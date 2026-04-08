@@ -1,0 +1,13 @@
+[
+  {
+    "id": "typescript-chan",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+    "name": "TypeScript-Chan for Extensions",
+    "type": "unrestricted",
+    "source": "https://raw.githubusercontent.com/kaede-basement/trusted-extensions/refs/heads/main/plugins/typescript-chan/typescript-chan.js",
+    "version": "0.1",
+    "authors": ["microsoft", "notwindstone"],
+    "languages": ["en"],
+    "categories": ["Utilities"]
+  }
+]
