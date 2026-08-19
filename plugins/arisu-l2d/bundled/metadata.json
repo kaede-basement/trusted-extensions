@@ -1,0 +1,10 @@
+{
+  "logo": "https://images.steamusercontent.com/ugc/10440273654735333405/1474C875A68FA0647FA3E115A06BD63D70DF9479/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+  "name": "Tendou Arisu Live2D",
+  "source": "",
+  "version": "1.0",
+  "authors": ["DeepSeek V4 Pro 08/13", "notwindstone"],
+  "languages": ["zh", "ja", "en", "vi", "ru"],
+  "categories": ["customization"],
+  "type": "unrestricted"
+}
