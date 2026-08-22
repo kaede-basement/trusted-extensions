@@ -1,0 +1,17 @@
+{
+  "logo": "https://upload.wikimedia.org/wikipedia/en/2/23/System_Preferences_icon.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+  "name": "Hot Module Reload (HMR)",
+  "source": "",
+  "version": "1.0",
+  "authors": [
+    "deepseek-v4-pro-08/13",
+    "notwindstone"
+  ],
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    "development"
+  ],
+  "type": "unrestricted"
+}
