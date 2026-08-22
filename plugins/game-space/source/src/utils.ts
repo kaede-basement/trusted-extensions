@@ -261,7 +261,7 @@ export function attachSettings(): () => void {
         globalStates["config/game-space-imported"].push({ ...currentGame });
         currentGame.image = "";
         currentGame.name = "";
-        currentGame.data.value = undefined;
+        currentGame.data = { "kind": currentGame.data.kind, "value": undefined };
       },
       "inner" : {
         "kind": "button",
