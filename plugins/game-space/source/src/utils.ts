@@ -52,11 +52,13 @@ export function modifyHost(): () => void {
   const unattachContextMenuItems = attachContextMenuItems();
   const unattachSettings = attachSettings();
 
-  const lastRoute = globalStates.currentPage;
+  const lastMountRoute = globalStates.currentPage;
 
   // Re-trigger the changed tabs in Settings
-  Router.navigate("none");
-  nextTick().then(() => Router.navigate(lastRoute));
+  if (lastMountRoute === "settings") {
+    Router.navigate("none");
+    nextTick().then(() => Router.navigate(lastMountRoute));
+  }
 
   return (): void => {
     unattachContextMenuItems();
@@ -65,8 +67,10 @@ export function modifyHost(): () => void {
     const lastUnmountRoute = globalStates.currentPage;
 
     // Re-trigger the changed tabs in Settings
-    Router.navigate("none");
-    nextTick().then(() => Router.navigate(lastUnmountRoute));
+    if (lastUnmountRoute) {
+      Router.navigate("none");
+      nextTick().then(() => Router.navigate(lastUnmountRoute));
+    }
   };
 }
 export function attachListeners(): () => void {
