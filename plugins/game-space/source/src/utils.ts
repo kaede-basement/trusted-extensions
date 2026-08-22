@@ -67,7 +67,7 @@ export function modifyHost(): () => void {
     const lastUnmountRoute = globalStates.currentPage;
 
     // Re-trigger the changed tabs in Settings
-    if (lastUnmountRoute) {
+    if (lastUnmountRoute === "settings") {
       Router.navigate("none");
       nextTick().then(() => Router.navigate(lastUnmountRoute));
     }
