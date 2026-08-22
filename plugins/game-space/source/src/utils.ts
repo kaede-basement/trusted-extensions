@@ -52,17 +52,21 @@ export function modifyHost(): () => void {
   const unattachContextMenuItems = attachContextMenuItems();
   const unattachSettings = attachSettings();
 
+  const lastRoute = globalStates.currentPage;
+
   // Re-trigger the changed tabs in Settings
   Router.navigate("none");
-  nextTick().then(() => Router.navigate("settings"));
+  nextTick().then(() => Router.navigate(lastRoute));
 
   return (): void => {
     unattachContextMenuItems();
     unattachSettings();
 
+    const lastUnmountRoute = globalStates.currentPage;
+
     // Re-trigger the changed tabs in Settings
     Router.navigate("none");
-    nextTick().then(() => Router.navigate("settings"));
+    nextTick().then(() => Router.navigate(lastUnmountRoute));
   };
 }
 export function attachListeners(): () => void {
