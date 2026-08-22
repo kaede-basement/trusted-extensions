@@ -1,7 +1,9 @@
 import CursorsStyle from "./cursors.css?raw";
 
 declare global {
-  const Kaede: any;
+  const scopedThis: {
+    "Extension": any;
+  };
 }
 
 function execute(): { "resume": () => void; "stop": () => void } {
@@ -43,5 +45,5 @@ function execute(): { "resume": () => void; "stop": () => void } {
 
 const { resume, stop } = execute();
 
-Kaede.subscribe("lifecycle::dirty-enable", resume);
-Kaede.subscribe("lifecycle::disable", stop);
+scopedThis.Extension.subscribe("lifecycle::dirty-enable", resume);
+scopedThis.Extension.subscribe("lifecycle::disable", stop);
